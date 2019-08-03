@@ -19,7 +19,7 @@ Java程序的正确性不能依赖于线程的优先级高低
 | TIME_WAITING | 超时等待，可以自行返回         |
 | TERMINATED   | 终止，执行完毕                 |
 
-![Thread-State](D:\Java\MultipleProgram\src\chap4\Thread-State.png)
+![Thread-State](./Thread-State.png)
 
 Java将操作系统中运行和就绪统称为运行状态，阻塞态是线程进入synchronized域获取锁时的状态。
 
@@ -59,7 +59,7 @@ Java支持多线程同时访问一个对象,每个线程可以拥有该变量的
 
 任意对象都有自己的监视器，没有获取到监视器的线程会阻塞在同步块入口处，进入BLOCKED状态。
 
-![Monitor](D:\Java\MultipleProgram\src\chap4\Monitor.png)
+![Monitor](./Monitor.png)
 
 任意线程对Object(受synchronized保护)的访问，首先要获得监视器，失败则进入同步队列。前驱释放锁后，该操作唤醒阻塞在同步队列中的线程，重新尝试对锁的获取。
 
@@ -70,7 +70,7 @@ Java支持多线程同时访问一个对象,每个线程可以拥有该变量的
 * 调用notify后，等待线程依旧不会返回，需要等调用notify的线程释放锁以后。
 * 从wait返回的前提是获得了调用对象的锁。
 
-![WaitNotify](D:\Java\MultipleProgram\src\chap4\WaitNotify.png)
+![WaitNotify](./WaitNotify.png)
 
 ### 等待/通知的经典范式
 
